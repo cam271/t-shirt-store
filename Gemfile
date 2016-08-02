@@ -24,9 +24,19 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# My Gemfile actions
+# Moved sqlite3 into development/test group
+# Added pg gem into production for Heroku's db
+# Uncomented out bcrypt so that it could be used for cookies
+# Added the follwoing:
+
+# Needed for bootsrap according to https://github.com/twbs/bootstrap-sass#a-ruby-on-rails the other scss-rails gem is already installed
+gem 'bootstrap-sass', '~> 3.3.6'
+
+
 
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
