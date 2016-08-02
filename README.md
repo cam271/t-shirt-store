@@ -2,14 +2,11 @@
 
 A shopping cart app that I am making to show to employers as my origional code
 
-Things you may want to cover:
-
 * Ruby version
-2.3.1
+** 2.3.1
 
-Rails version
-5.0
+* Rails version
+** 5.0
 
 * Database creation
-sqlite3 :test, :development
-pg :production
+** sqlite3 :test, :development /pg :production
