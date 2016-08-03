@@ -35,8 +35,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Needed for bootsrap according to https://github.com/twbs/bootstrap-sass#a-ruby-on-rails the other scss-rails gem is already installed
 gem 'bootstrap-sass', '~> 3.3.6'
-
-
+# added autoprefixer-rails-6.3.7 in order for rails g model command to execute
+gem 'autoprefixer-rails', '~> 6.3.7' 
 
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
