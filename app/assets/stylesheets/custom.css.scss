@@ -2,6 +2,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -43,6 +44,24 @@ p {
 .header {
 	color: green;	
 }
+
+
+/* universal */
+
+/*distance from navbar*/
+body {
+  padding-top: 100px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
 /* header */
 
 #logo {
@@ -58,6 +77,42 @@ p {
   color: #fff;
   text-decoration: none;
   }
+}
+
+
+/* footer */
+
+.footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a { 
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+		  text-decoration: none;
+    }   
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: right;
+      margin-right: 15px;
+		}
+	}
+}
+
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
 
 
