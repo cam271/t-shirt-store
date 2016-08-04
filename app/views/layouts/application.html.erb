@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title)) %></title>
+    <title><%= pages_title(yield(:title)) %></title>
 		<%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -20,11 +20,3 @@
     </div>
 	</body>
 </html>
-
-
-<!-- might use later 
-      <%# flash.each do |message_type, message| %>
-        <div class="alert alert-<%#= message_type %>"><%#= message %></div>
-      <%# end %>
-      <%#= yield %>
--->
