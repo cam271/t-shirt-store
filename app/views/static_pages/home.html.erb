@@ -4,4 +4,16 @@
 	<div class="row">
 		<div class="col-md-offset-2"><%= image_tag("t-shirt.jpg", size: "800x500", alt: "t-shirt-graphic") %></div>
 	</div>	
+
+	<section>
+		<h1>Shop</h1>
+	</section>
+
+	<section>
+		<%= link_to(image_tag("mens.png", size: "500x300", alt: "mens-graphic"), men_path ) %>
+		<%= link_to(image_tag("womens.png", size: "500x300", alt: "womens-graphic"), women_path ) %>
+		<%= link_to(image_tag("boys.png", size: "500x300", alt: "boys-graphic"), boys_path ) %>
+		<%= link_to(image_tag("girls.png", size: "500x300", alt: "girls-graphic"), girls_path ) %>
+	</section>
+
 </body>
