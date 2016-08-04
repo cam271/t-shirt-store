@@ -7,6 +7,9 @@
 
 $gray-medium-light: #eaeaea;
 $white:#fff;
+$lighter-brown: #f9f2ec;
+$light-brown: #ecd9c6;
+
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -22,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 5em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -120,3 +123,16 @@ textarea {
 }
 
 
+/* sections */
+
+section {
+  background: $lighter-brown; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($lighter-brown, $light-brown); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($lighter-brown, $light-brown); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($lighter-brown, $light-brown); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($lighter-brown, $light-brown); /* Standard syntax */
+}
+
+.shop-title {
+	margin-top:25px;
+}
