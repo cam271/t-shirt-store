@@ -40,6 +40,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # Rails extracted `assigns` and `assert_template` from ActionDispatch.
 gem 'rails-controller-testing', '~> 0.1.1'
 
+# faker gem for fake shirts Faker::commerce
+gem 'faker', '~> 1.6', '>= 1.6.6'
+
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
