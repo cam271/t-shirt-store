@@ -3,11 +3,11 @@
 one:
   category: MyString
   style: MyString
-  sex: 
+  sex: MyString
   image: MyString
 
 two:
   category: MyString
   style: MyString
-  sex: 
+  sex: MyString
   image: MyString
