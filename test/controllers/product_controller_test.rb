@@ -1,24 +1,28 @@
 require 'test_helper'
 
 class ProductControllerTest < ActionDispatch::IntegrationTest
-  test "should get men" do
-    get product_men_url
+test "should get men" do
+    get men_path
     assert_response :success
-  end
-
+    assert_select "title", "Mens Shirts"
+  end 
+  
   test "should get women" do
-    get product_women_url
+    get women_path
     assert_response :success
-  end
-
+    assert_select "title", "Womens Shirts"
+  end 
+  
   test "should get boys" do
-    get product_boys_url
+    get boys_path
     assert_response :success
-  end
-
+    assert_select "title", "Boys Shirts"
+  end 
+  
   test "should get girls" do
-    get product_girls_url
+    get girls_path
     assert_response :success
-  end
+    assert_select "title", "Girls Shirts"
+  end 
 
 end
