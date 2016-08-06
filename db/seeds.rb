@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'csv'
+
+CSV.foreach(Rails.root.join("db/seeds_data/t-shirts.csv"), headers: true) do |row|
+	Product.find_or_create_by(category: row[0], style: row[1], sex: row[2], image: row[3], price: row[4])
+end  
