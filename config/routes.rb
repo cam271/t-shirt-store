@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   
+  get 'product/men'
+
+  get 'product/women'
+
+  get 'product/boys'
+
+  get 'product/girls'
+
 	root 										'static_pages#home'
 	get 		'contact' 	=> 	'static_pages#contact'
  	get			'about' 		=>  'static_pages#about' 
