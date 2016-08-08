@@ -8,15 +8,4 @@ class StaticPagesController < ApplicationController
 	def contact
 	end
 
-	def men
-	end
-
-	def women
-	end
-
-	def boys
-	end
-
-	def gilrs
-	end
 end
