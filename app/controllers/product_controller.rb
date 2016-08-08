@@ -1,13 +1,7 @@
 class ProductController < ApplicationController
-  def men
-  end
+	# index action to be routed to to display all of the thsirts
+  def index
+  	@product = Product.new
+	end
 
-  def women
-  end
-
-  def boys
-  end
-
-  def girls
-  end
 end
