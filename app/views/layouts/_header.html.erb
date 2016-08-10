@@ -4,10 +4,10 @@
 		<nav>
 			<ul class="nav navbar-nav navbar-right">
 				<li><%= link_to "Home", root_path %></li>
-				<li><%= link_to "Mens", products_path, :category => "men" %></li>
-				<li><%= link_to "Womens", products_path, :category => "women" %></li>
-				<li><%= link_to "Boys", products_path, :category => "boys" %></li>
-				<li><%= link_to "Girls", products_path, :category => "girls" %></li>
+				<li><%= link_to "Mens", products_path(:category => "men") %></li>
+				<li><%= link_to "Womens", products_path(:category => "women") %></li>
+				<li><%= link_to "Boys", products_path(:category => "boys") %></li>
+				<li><%= link_to "Girls", products_path(:category => "girls") %></li>
 				<!--<li><button type="button" class="btn btn-default navbar-btn">Sign Up</button></li>-->
 			</ul>
 		</nav>

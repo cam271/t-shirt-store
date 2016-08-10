@@ -10,10 +10,10 @@
 	</section>
 
 	<section class="shop">
-		<%= link_to(image_tag("mens.png", size: "500x300", alt: "mens-graphic"), products_path, :category => "men" ) %>
-		<%= link_to(image_tag("womens.png", size: "500x300", alt: "womens-graphic"), products_pathi, :category => "women"  ) %>
-		<%= link_to(image_tag("boys.png", size: "500x300", alt: "boys-graphic"), products_path, :category => "boys"  ) %>
-		<%= link_to(image_tag("girls.png", size: "500x300", alt: "girls-graphic"), products_path, :category => "girls"  ) %>
+		<%= link_to(image_tag("mens.png", size: "500x300", alt: "mens-graphic"), products_path(:category => "men")) %>
+		<%= link_to(image_tag("womens.png", size: "500x300", alt: "womens-graphic"), products_path(:category => "women")) %>
+		<%= link_to(image_tag("boys.png", size: "500x300", alt: "boys-graphic"), products_path(:category => "boys")) %>
+		<%= link_to(image_tag("girls.png", size: "500x300", alt: "girls-graphic"), products_path(:category => "girls")) %>
 	</section>
 
 </body>
