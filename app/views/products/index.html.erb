@@ -1,0 +1,13 @@
+<h1><%= params[:category].capitalize %></h1>
+
+<div class="product">
+	<div class="row">
+		<% @products.each do |product| %>
+			<ul>
+				<li>
+					<div class="col-md-6"> <%= image_tag(product.image, height: '150', width: '150' ) %><span>Price: <%= product.price %><span></div>i
+				<li>
+			</ul>
+		<% end %>
+	</div>
+</div>
