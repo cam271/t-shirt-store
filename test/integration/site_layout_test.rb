@@ -7,10 +7,10 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
 		get root_path
 		assert_template 'static_pages/home'
 		assert_select 'a[href=?]', root_path, count:2
-		assert_select 'a[href=?]', men_path, count:2
-		assert_select 'a[href=?]', women_path, count:2
-		assert_select 'a[href=?]', boys_path, count:2
-		assert_select 'a[href=?]', girls_path, count:2
+		assert_select 'a[href=?]', products_path(:category => "men"), count:2
+		assert_select 'a[href=?]', products_path(:category => "women"), count:2
+		assert_select 'a[href=?]', products_path(:category => "boys"), count:2
+		assert_select 'a[href=?]', products_path(:category => "girls"), count:2
 	end
 
 end
