@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 5em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
+  margin-bottom: 75px;
   text-align: center;
 }
 
@@ -143,4 +143,16 @@ section {
 
 .shop-title {
 	margin-top:25px;
+}
+
+
+/* products */
+
+.product {
+	ul {
+		margin: 0px;
+	}
+	li {
+	 list-style:none;
+	}
 }
