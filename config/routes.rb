@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'carts/show'
+
 	root 										'static_pages#home'
 	resources 							:products, only:[:index]
 	get 		'contact' 	=> 	'static_pages#contact'
