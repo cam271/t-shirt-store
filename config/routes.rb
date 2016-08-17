@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'order_items/create'
+
+  get 'order_items/update'
+
+  get 'order_items/destroy'
+
 	# this was created with the controller
   get 'carts/show'
 	
