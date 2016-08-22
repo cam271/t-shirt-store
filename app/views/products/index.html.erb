@@ -1,6 +1,12 @@
 <!-- this page shows all of the t-shirt product results -->
 
+<!--shows the requested pages title-->
 <% provide(:title, params[:category].capitalize) %>
+
+<!--shopping cart info-->
+<%= render "layouts/cart" %>
+
+<!--Heading of requested shoping category-->
 <h1><%= params[:category].capitalize %></h1>
 
 <div class="product">
