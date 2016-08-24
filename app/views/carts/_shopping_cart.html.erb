@@ -13,7 +13,7 @@
 <!-- if cart is empty -->
 <% if @order_items.size == 0 %>
   <p class="text-center">
-    There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.
+    There are no items in your shopping cart. Please <%= link_to "go back", url_for(:back) %> and add some items to your cart.
   </p>
 
 <!-- if cart has items -->
