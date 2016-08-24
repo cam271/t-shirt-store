@@ -1,10 +1,10 @@
 <!-- this page shows all of the t-shirt product results -->
 
+<!--shopping cart info-->
+ <div class="cart-text"><%= render "layouts/cart" %></div>
+
 <!--shows the requested pages title-->
 <% provide(:title, params[:category].capitalize) %>
-
-<!--shopping cart info-->
-<%= render "layouts/cart" %>
 
 <!--Heading of requested shoping category-->
 <h1><%= params[:category].capitalize %></h1>
@@ -15,7 +15,7 @@
     	<ul>
       	<li>
         	<div class="col-md-3 product-row"> <%= image_tag(product.image, height: '150', width: '150' ) %>
-          	<%= form_for @order_item, remote: true do |f| %>
+          	<%= form_for :order_item, remote: true do |f| %>
 							<p>Price: <span style="color: green"><%= number_to_currency product.price %></span><p>    
 							<div class="input-group-btn">
 								<%= f.hidden_field :product_id, value: product.id %>
