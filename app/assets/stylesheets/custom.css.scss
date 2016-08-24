@@ -157,3 +157,20 @@ section {
 		cursor: zoom-in;
 	}
 }
+
+.product-row {
+	margin-bottom: 50px;
+}
+
+/* width of the number_field box (quanity of the item 1-99) */
+.form-control {
+	width: 60px;
+	height: 30px;
+}
+
+/* class to manipulate button and quanity box under the products image */
+.inline-form {
+	display: inline-block;
+	margin-right: 10px;
+  vertical-align:top;
+}
