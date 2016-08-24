@@ -9,14 +9,23 @@
 <!--Heading of requested shoping category-->
 <h1><%= params[:category].capitalize %></h1>
 
-<div class="product">
+<div class="product">  
 	<div class="row">
-		<% @products.each do |product| %>
-			<ul>
-				<li>
-					<div class="col-md-3"> <%= image_tag(product.image, height: '150', width: '150' ) %></br><span>Price: <%= product.price %></span></div>
-				<li>
-			</ul>
-		<% end %>
-	</div>
+  	<% @products.each do |product| %>
+    	<ul>
+      	<li>
+        	<div class="col-md-3 product-row"> <%= image_tag(product.image, height: '150', width: '150' ) %>
+          	<%= form_for @order_item, remote: true do |f| %>
+							<p>Price: <span style="color: green"><%= number_to_currency product.price %></span><p>    
+							<div class="input-group-btn">
+								<%= f.hidden_field :product_id, value: product.id %>
+								<%= f.number_field :quantity, value: 1, class: "form-control inline-form", min: 1, max: 99 %>
+								<%= f.submit "Add to Cart", class: "btn btn-primary btn-sm inline_form" %>
+							</div>
+						<% end %>
+         	</div>  
+       	<li>
+     	</ul>
+    <% end %>
+  </div>
 </div>
