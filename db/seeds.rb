@@ -9,5 +9,5 @@
 require 'csv'
 
 CSV.foreach(Rails.root.join("db/seeds_data/t-shirts.csv"), headers: true) do |row|
-	Product.find_or_create_by(category: row[0], image: row[1], price: row[2])
+	Product.find_or_create_by(category: row[0], image: row[1], price: row[2], active: row[3])
 end  
