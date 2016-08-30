@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  category: MyString
-  image: MyString
+mens_shirt:
+  category: men
+  image: men_1.jpg
+  price: 19.99
+  active: true
 
-two:
-  category: MyString
-  image: MyString
+womens_shirt:
+  category: women
+  image: women_1.jpg
+  price: 19.99
+  active: true
