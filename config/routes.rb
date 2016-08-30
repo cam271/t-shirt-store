@@ -1,14 +1,5 @@
 Rails.application.routes.draw do
 
- 	# these were created with controller generations
-  get 'order_items/create'
-
-  get 'order_items/update'
-
-  get 'order_items/destroy'
-
-  get 'carts/show'
-	
 	# home page
 	root 'static_pages#home'
 	
