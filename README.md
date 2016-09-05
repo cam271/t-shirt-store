@@ -12,3 +12,5 @@ Rails version
 Databases  
 sqlite3 :test, :development  
 'pg', '~> 0.18.4' :production
+
+Mintest
