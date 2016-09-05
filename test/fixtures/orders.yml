@@ -12,4 +12,4 @@ two:
   tax: 9.99
   shipping: 9.99
   total: 9.99
-  order_status: two
+  order_status: one
