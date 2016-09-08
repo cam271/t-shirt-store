@@ -19,3 +19,19 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+## Text editor specific
+## MAC OS
+.DS_Store
+
+## TEXTMATE
+*.tmproj
+tmtags
+
+## EMACS
+*~
+\#*
+.\#*
+
+## VIM
+*.swp
