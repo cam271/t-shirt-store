@@ -5,5 +5,4 @@ class ProductsController < ApplicationController
     @products = Product.where(category: params[:category])
     @order_item = current_order.order_items.new
   end
-
 end
