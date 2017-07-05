@@ -53,8 +53,14 @@ group :development, :test do
 	gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  # helps with debugging
+  # shows schema in model file, use annotate command in command line
   gem 'annotate'
+  # pry-byebug debugging gem
+  gem 'pry-byebug'
+  # rails console prettifies output
+  gem "awesome_print", require:"ap"
+  # gives more info on rails error page
+  gem 'better_errors'
 end
 
 group :development do
