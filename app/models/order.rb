@@ -25,17 +25,16 @@ class Order < ApplicationRecord
   end
 
 
-  #private methods
   private
 
-  #sets order status to equal in progress
-  def set_order_status
-    self.order_status_id = 1
-  end
-  
-  #sets the tables subtotal column to current total
-  def update_subtotal
-    self[:subtotal] = subtotal
-  end
+    #sets order status to equal in progress
+    def set_order_status
+      self.order_status_id = 1
+    end
+    
+    #sets the tables subtotal column to current total
+    def update_subtotal
+      self[:subtotal] = subtotal
+    end
 
 end
