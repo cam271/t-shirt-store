@@ -1,5 +1,3 @@
-require 'pry'
-
 class CartsController < ApplicationController
 
   def show
