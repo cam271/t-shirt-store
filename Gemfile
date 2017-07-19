@@ -57,10 +57,15 @@ group :development, :test do
   gem 'annotate'
   # pry-byebug debugging gem
   gem 'pry-byebug'
+  # pry
+  gem 'pry'
+  gem 'pry-rails'
   # rails console prettifies output
   gem "awesome_print", require:"ap"
   # gives more info on rails error page
   gem 'better_errors'
+  gem 'binding_of_caller'
+
 end
 
 group :development do
