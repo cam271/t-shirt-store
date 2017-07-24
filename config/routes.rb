@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'transactions/new'
-
 	# home page
 	root 'static_pages#home'
 	
@@ -17,7 +15,9 @@ Rails.application.routes.draw do
 	# about and contact pages
 	get 		'contact' 	=> 	'static_pages#contact'
  	get			'about' 		=>  'static_pages#about' 
-	
+
+  # checkout/transaction with Braintree	
+  resources :transactions, only: [:new, :create]
 
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
