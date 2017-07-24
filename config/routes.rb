@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'transactions/new'
+
 	# home page
 	root 'static_pages#home'
 	
