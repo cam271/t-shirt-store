@@ -68,7 +68,8 @@ group :development, :test do
   # gives more info on rails error page
   gem 'better_errors'
   gem 'binding_of_caller'
-
+  # Rspec-rails
+  gem 'rspec-rails'
 end
 
 group :development do
