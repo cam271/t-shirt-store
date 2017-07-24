@@ -12,7 +12,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+# Braintree for checkout
+gem 'braintree', '~> 2.76'
+# RSpec for testing
+gem 'rspec', '~> 3.6'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -25,6 +28,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Use pg as the database for Active Record
+gem 'pg', '~> 0.18.4'
 
 # My Gemfile actions
 # Moved sqlite3 into development/test group
@@ -49,8 +54,6 @@ gem 'hiredis', '~> 0.6.1'
 
 
 group :development, :test do
-	# Use pg as the database for Active Record
-  gem 'pg', '~> 0.18.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   # shows schema in model file, use annotate command in command line
@@ -78,7 +81,6 @@ group :development do
 end
 
 group :production do
-	gem 'pg', '~> 0.18.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
