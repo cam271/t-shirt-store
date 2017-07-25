@@ -14,8 +14,6 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 # Braintree for checkout
 gem 'braintree', '~> 2.76'
-# RSpec for testing
-gem 'rspec', '~> 3.6'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -30,7 +28,8 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 # Use pg as the database for Active Record
 gem 'pg', '~> 0.18.4'
-
+# Devise to work with users
+gem 'devise', '~> 4.3'
 # My Gemfile actions
 # Moved sqlite3 into development/test group
 # Added pg gem into production for Heroku's db
