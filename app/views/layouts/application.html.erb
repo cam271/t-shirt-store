@@ -13,7 +13,15 @@
 	<body>
     <%= render 'layouts/header' %>
 		<div class="container">
-			<%= yield %>
+      <!-- I added from Devise site -->
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+      <!-- end -->
+ 			<%= yield %>
 			<%= render 'layouts/footer' %>    
 			<%= debug(params) if Rails.env.development? %>
     </div>

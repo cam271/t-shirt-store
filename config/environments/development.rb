@@ -33,7 +33,11 @@ Rails.application.configure do
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
-  
+
+  # I added from devisesuggestion  
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # I added this for rescue rails c to work with Pry instead of IRB
   config.console = Pry
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
