@@ -8,7 +8,15 @@
 				<li><%= link_to "Womens", products_path(:category => "women") %></li>
 				<li><%= link_to "Boys", products_path(:category => "boys") %></li>
 				<li><%= link_to "Girls", products_path(:category => "girls") %></li>
-				<!--<li><button type="button" class="btn btn-default navbar-btn">Sign Up</button></li>-->
+        <!-- adding from http://guides.railsgirls.com/devise section 6 -->
+        <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
+        <% else %>
+          <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
+          <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+        <% end %>
 			</ul>
 		</nav>
 	</div>
