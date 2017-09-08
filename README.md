@@ -1,7 +1,5 @@
 # README
 
-A ecommerce app as an ongoing learning project
-
 [t-shirt-store](https://t-shirt-store.herokuapp.com)
 
 Ruby version  
