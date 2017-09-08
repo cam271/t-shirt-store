@@ -13,8 +13,5 @@ Rails version
 Database (Development/Production/Test)  
 'pg', '~> 0.18.4' :production
 
-Databases
-'pg', '~> 0.18.4'
-
 Test
 RSpec
