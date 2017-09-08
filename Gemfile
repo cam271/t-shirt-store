@@ -12,12 +12,14 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-# Braintree for checkout
+# Braintree, Figaro, and Gon for checkout
 gem 'braintree', '~> 2.76'
+gem 'figaro'
+gem 'gon'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+#gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -69,6 +71,9 @@ group :development, :test do
   gem 'binding_of_caller'
   # Rspec-rails
   gem 'rspec-rails'
+  gem 'factory_girl_rails', '~> 4.7'
+  gem 'capybara', '~> 2.15', '>= 2.15.1'
+
 end
 
 group :development do

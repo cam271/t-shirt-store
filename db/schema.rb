@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170727030312) do
+ActiveRecord::Schema.define(version: 20170810042921) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,11 +18,10 @@ ActiveRecord::Schema.define(version: 20170727030312) do
   create_table "order_items", force: :cascade do |t|
     t.integer  "product_id"
     t.integer  "order_id"
-    t.decimal  "unit_price",  precision: 12, scale: 3
+    t.decimal  "unit_price", precision: 12, scale: 3
     t.integer  "quantity"
-    t.decimal  "total_price", precision: 12, scale: 3
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.index ["order_id"], name: "index_order_items_on_order_id", using: :btree
     t.index ["product_id"], name: "index_order_items_on_product_id", using: :btree
   end
@@ -34,16 +33,14 @@ ActiveRecord::Schema.define(version: 20170727030312) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.decimal  "subtotal",          precision: 12, scale: 3
-    t.decimal  "tax",               precision: 12, scale: 3
-    t.decimal  "shipping",          precision: 12, scale: 3
-    t.decimal  "total",             precision: 12, scale: 3
-    t.datetime "created_at",                                 null: false
-    t.datetime "updated_at",                                 null: false
-    t.integer  "order_statuses_id"
+    t.decimal  "subtotal",        precision: 12, scale: 3
+    t.decimal  "tax",             precision: 12, scale: 3
+    t.decimal  "shipping",        precision: 12, scale: 3
+    t.decimal  "total",           precision: 12, scale: 3
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.integer  "order_status_id"
     t.index ["order_status_id"], name: "index_orders_on_order_status_id", using: :btree
-    t.index ["order_statuses_id"], name: "index_orders_on_order_statuses_id", using: :btree
   end
 
   create_table "products", force: :cascade do |t|
@@ -53,6 +50,14 @@ ActiveRecord::Schema.define(version: 20170727030312) do
     t.datetime "updated_at", null: false
     t.boolean  "active"
     t.float    "price"
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.integer  "products_id"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["products_id", "user_id"], name: "index_purchases_on_products_id_and_user_id", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade do |t|

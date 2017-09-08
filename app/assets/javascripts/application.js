@@ -14,5 +14,4 @@
 // https://github.com/twbs/bootstrap-sass#a-ruby-on-rails said to add bootstrap-sprockets
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .

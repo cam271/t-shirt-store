@@ -1,6 +1,6 @@
 # README
 
-A shopping cart app that I am making to show to employers as my origional code
+A ecommerce app as an ongoing learning project
 [t-shirt-store](https://t-shirt-store.herokuapp.com)
 
 Ruby version  
@@ -9,8 +9,7 @@ Ruby version
 Rails version  
 5.0  
 
-Databases  
-sqlite3 :test, :development  
+Database (Development/Production/Test)  
 'pg', '~> 0.18.4' :production
 
-Mintest
+RSpec

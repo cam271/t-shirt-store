@@ -1,3 +1,4 @@
-<!-- partial for the shopping cart to be displayed in all categories shows total item count and the total price -->
-<%= link_to "#{current_order.order_items.size} Items in Cart ( #{number_to_currency current_order.subtotal} )", cart_path, class: "btn btn-link" %>
+<!-- partial for the shopping cart to be displayed in all categories shows subtotal item count and the subtotal price -->
+<%= link_to "#{current_order.order_items.size} Items in Cart ( #{number_to_currency(subtotal) } )", cart_path, class: "btn btn-link" %>
+<%= link_to "Checkout", new_transaction_path, class: "button" unless current_order.blank?%>
 

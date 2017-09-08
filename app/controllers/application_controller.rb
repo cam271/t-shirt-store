@@ -1,9 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_order
-  # uncoment this when devise error goes away: before_action :authenticate_user!
+  helper_method :subtotal
+  helper_method :order_items
 
-  # helper method to create order throughout the seesion or new order
+  # helper method to find current order_id or else it creates a new Order
   def current_order
     if !session[:order_id].nil?
       Order.find(session[:order_id])
@@ -11,5 +12,13 @@ class ApplicationController < ActionController::Base
       Order.new
     end
   end
-  
+
+  def subtotal
+    @subtotal = current_order.order_items.sum(:unit_price)
+  end
+
+  def order_items
+    @order_items = current_order.order_items
+  end
+
 end

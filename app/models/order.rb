@@ -15,14 +15,18 @@
 
 class Order < ApplicationRecord
   belongs_to :order_status
-  has_many :order_items
+  has_many :order_items, :dependent => :delete_all
   before_save :set_order_status
-  before_save :update_subtotal
+  
+  # TODO remove subtotal column
 
-  # gets called by before_save method to either set subtotal if there are items or 0 if their are not
-  def subtotal
-    sum = order_items.collect { |oi| oi.valid? ? (oi.quantity * oi.unit_price) : 0 }.sum
-  end
+  #before_save :update_subtotal
+
+  #might havve to add this back in
+  #gets called by before_save method to either set subtotal if there are items or 0 if their are not
+  #def subtotal
+   # sum = order_items.collect { |oi| oi.valid? ? (oi.quantity * oi.unit_price) : 0 }.sum
+  #end
 
 
   private
@@ -33,8 +37,8 @@ class Order < ApplicationRecord
     end
     
     #sets the tables subtotal column to current total
-    def update_subtotal
-      self[:subtotal] = subtotal
-    end
+    #def update_subtotal
+     # self[:subtotal] = subtotal
+    #end
 
 end

@@ -5,9 +5,10 @@
   <head>
     <title><%= pages_title(yield(:title)) %></title>
 		<%= csrf_meta_tags %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-		<%= render 'layouts/shim' %>
+    <%= include_gon(:init => true) %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= render 'layouts/shim' %>
+    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
   </head>
 
 	<body>
@@ -24,6 +25,7 @@
  			<%= yield %>
 			<%= render 'layouts/footer' %>    
 			<%= debug(params) if Rails.env.development? %>
+      <%= javascript_include_tag 'application' %>
     </div>
 	</body>
 </html>
