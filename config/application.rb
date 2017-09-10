@@ -14,6 +14,7 @@ module TShirtStore
     # -- all .rb files in that directory are automatically loaded.
     config.generators do |g|
       g.test_framework :rspec
+      config.assets.initialize_on_precompile = false
     end
   end
 end

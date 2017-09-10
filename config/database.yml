@@ -4,6 +4,10 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
+#   Access database with 
+#   rails db
+#   heroku pg:psql
+#
 development:
   adapter: postgresql
   database: t_shirt_store_development
