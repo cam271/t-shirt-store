@@ -68,8 +68,7 @@ group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails', '~> 4.7'
   gem 'capybara', '~> 2.15', '>= 2.15.1'
-  gem 'shoulda', '~> 3.5'
-  gem 'shoulda-matchers', '~> 2.0'
+  gem 'shoulda-matchers', '~> 3.1'
   gem 'database_cleaner'
 end
 
