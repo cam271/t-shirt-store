@@ -52,19 +52,12 @@ gem 'rails-controller-testing', '~> 0.1.1'
 # (so far this is not being used) faker gem for fake shirts Faker::commerce
 gem 'faker', '~> 1.6', '>= 1.6.6'
 
-# redis gems needed for the shopping basket
-gem 'redis', '~> 3.3', '>= 3.3.1'
-gem 'hiredis', '~> 0.6.1'
-
-
-group :development, :test do
+group :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   # shows schema in model file, use annotate command in command line
   gem 'annotate'
-  # pry-byebug debugging gem
   gem 'pry-byebug'
-  # pry
   gem 'pry'
   gem 'pry-rails'
   # rails console prettifies output
@@ -72,11 +65,12 @@ group :development, :test do
   # gives more info on rails error page
   gem 'better_errors'
   gem 'binding_of_caller'
-  # Rspec-rails
   gem 'rspec-rails'
   gem 'factory_girl_rails', '~> 4.7'
   gem 'capybara', '~> 2.15', '>= 2.15.1'
-
+  gem 'shoulda', '~> 3.5'
+  gem 'shoulda-matchers', '~> 2.0'
+  gem 'database_cleaner'
 end
 
 group :development do
