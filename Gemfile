@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.1', '>= 5.1.4'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -24,8 +25,6 @@ gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
@@ -52,7 +51,7 @@ gem 'rails-controller-testing', '~> 0.1.1'
 # (so far this is not being used) faker gem for fake shirts Faker::commerce
 gem 'faker', '~> 1.6', '>= 1.6.6'
 
-group :test do
+group :test, :development do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   # shows schema in model file, use annotate command in command line
@@ -66,10 +65,10 @@ group :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rspec-rails'
-  gem 'factory_girl_rails', '~> 4.7'
-  gem 'capybara', '~> 2.15', '>= 2.15.1'
+  gem 'factory_bot_rails', '~> 4.8'
+  gem 'capybara', '~> 2.15'
   gem 'shoulda-matchers', '~> 3.1'
-  gem 'database_cleaner'
+  gem 'database_cleaner', '~> 1.6'
 end
 
 group :development do
@@ -77,8 +76,6 @@ group :development do
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :production do

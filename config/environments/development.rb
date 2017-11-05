@@ -18,7 +18,7 @@ Rails.application.configure do
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => 'public, max-age=172800'
+      'Cache-Control' => "public, max-age=#{2.days.seconds.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -34,11 +34,6 @@ Rails.application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
-  # I added from devisesuggestion  
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
-  # I added this for rescue rails c to work with Pry instead of IRB
-  config.console = Pry
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
