@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe StaticPagesController, type: :controller do
+RSpec.describe StaticPagesController do
 
   describe "Get static pages" do
 

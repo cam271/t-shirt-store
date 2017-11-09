@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe TransactionsController, type: :controller do
+RSpec.describe TransactionsController do
 
   describe "GET #new" do
     it "returns http success" do
